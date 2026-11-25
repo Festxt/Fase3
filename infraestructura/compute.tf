@@ -75,7 +75,6 @@ resource "aws_instance" "rabbitmq" {                        # La máquina de la 
   }
 }
 
-# EJERCICIO: este bloque está comentado para que el resto se despliegue sin el worker. Descoméntalo y completa el mapa de templatefile().
 resource "aws_instance" "worker" {                        # La máquina del worker (una sola, gestionada con SSM)
   ami                    = data.aws_ami.al2023.id         # Imagen del sistema operativo encontrada arriba
   instance_type          = var.instance_type              # Tamaño de la máquina
